@@ -1,0 +1,8 @@
+[Unit]
+Description="Monitor file listing MACs of granted clients"
+
+[Path]
+PathModified=%%INSTALLDIR%%/data
+
+[Install]
+WantedBy=multi-user.target

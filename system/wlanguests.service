@@ -1,0 +1,11 @@
+[Unit]
+Description="Update iptables enabling clients"
+
+[Service]
+Type=oneshot
+WorkingDirectory=%%INSTALLDIR%%/data
+EnvironmentFile=%%INSTALLDIR%%/environment.local.conf
+ExecStart=%%INSTALLDIR%%/system/update-iptables.sh
+
+[Install]
+WantedBy=multi-user.target

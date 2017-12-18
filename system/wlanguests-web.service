@@ -1,0 +1,12 @@
+[Unit]
+Description="Update iptables enabling clients"
+
+[Service]
+Type=simple
+User=wlanguests-web
+WorkingDirectory=%%INSTALLDIR%%
+EnvironmentFile=%%INSTALLDIR%%/environment.local.conf
+ExecStart=/usr/bin/env npm start
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+{
+  "name": "captive-portal",
+  "version": "0.0.1",
+  "description": "captive portal for WLAN access point",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}

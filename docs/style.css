@@ -1,0 +1,101 @@
+body, table, form, ul, ol, h1, h2, h3 {
+	font: 12pt/1.5em sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+#wrapper {
+	max-width: 900px;
+	padding: 30px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 200%;
+	font-weight: normal;
+	margin: 1em 0 0.3em 0;
+}
+
+h2 {
+	font-size: 160%;
+	font-weight: normal;
+	margin: 1em 0 0.3em 0;
+}
+
+h3 {
+	font-size: 130%;
+	font-weight: normal;
+	margin: 1em 0 0.1em 0;
+}
+
+.onscreen h1 {
+	margin-top: 0.5em;
+	text-align: center;
+	font-size: 300%;
+	font-weight: bold;
+}
+
+p, blockquote, ul {
+	margin: 0 0 0.7em 0;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+blockquote {
+	padding: 1em;
+	border-left: 3px solid red;
+	background: rgba(255,0,0,0.05);
+}
+
+ul {
+	padding-left: 2em;
+}
+
+input, button {
+	display: inline-block;
+	line-height: 2em;
+	height: 2em;
+	box-sizing: content-box;
+	padding: 0 1em;
+	margin: 0.5em 0;
+}
+
+.page.hidden {
+	display: none
+}
+
+.tabular {
+	position: relative;
+	overflow: hidden;
+	font: normal 22pt/44pt sans-serif;
+}
+
+.tabular > label {
+	position: relative;
+	float: left;
+	width: 33.33%;
+}
+
+.tabular > .value {
+	position: relative;
+	font-weight: bold;
+}
+
+#secret > .value {
+	font: bold 40pt/44pt monospace;
+	letter-spacing: 0.4em;
+	transition: color 1s linear;
+}
+
+#progress .bar {
+	height: 20px;
+	position: relative;
+	overflow: hidden;
+	background: rgba(0,0,0,0.1);
+}
+
+#progress .fill {
+	height: 20px;
+	background-color: green;
+	transition: width 1s linear, background-color 1s linear;
+}
