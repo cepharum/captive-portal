@@ -121,7 +121,7 @@
 			<em>Quelle: <a href="https://www.ratgeberrecht.eu/urheberrecht-aktuell/wlan-haftung-muster-nutzungsbedingungen.html">https://www.ratgeberrecht.eu/</a></em>
 		</p>
 		<p>
-			<button onclick="confirmTerms()">Ich werde diese Nutzungsbedingungen einhalten.</button>
+			<div class="button" onclick="confirmTerms()">Ich werde diese Nutzungsbedingungen einhalten.</div>
 		</p>
 	</div>
 	<div id="page2" class="page hidden">
@@ -131,9 +131,9 @@
 			Eine erfolgreiche Freischaltung gilt dennoch stets für %%LEASETIME%%
 			Minuten.
 		</p>
-		<form method="POST" action=".">
+		<form method="POST" action="." id="codeform">
 			<input placeholder="Sicherheitscode" name="code" id="code"/>
-			<button type="submit">
+			<div class="button" onclick="document.getElementById('codeform').submit()">
 				Internet freischalten
 			</button>
 		</form>
