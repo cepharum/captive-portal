@@ -14,7 +14,8 @@ module.exports = function( req, res ) {
 				ssid,
 				secret: Secret.getCurrent().value,
 				age: Math.round( Secret.getCurrent().age / 1000 ),
-				maxage: Math.round( Secret.getCurrent().maxAge / 1000 ),
+				maxage: Math.round( Secret.maxAge / 1000 ),
+				token: global.currentShutdownToken,
 			} );
 		} )
 		.catch( error => Response.sendError( res, error ) );

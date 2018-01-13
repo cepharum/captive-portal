@@ -6,8 +6,53 @@ body, table, form, ul, ol, h1, h2, h3, div, span {
 
 #wrapper {
 	max-width: 900px;
+	position: relative;
+	overflow: hidden;
 	padding: 30px;
 	margin: 0 auto;
+}
+
+.hidden {
+	display: none;
+}
+
+#wrapper > #regular {
+	width: 100%;
+}
+
+#wrapper > #shutdown {
+	width: 100%;
+	height: 100vh;
+	font-size: 200%;
+	text-align: center;
+}
+
+#wrapper > #shutdown.visible,
+#wrapper > #shutdown.failed {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#wrapper > #shutdown.visible > :not(.failed) {
+	display: block;
+}
+#wrapper > #shutdown.visible > .failed {
+	display: none;
+}
+
+#wrapper > #shutdown.failed > :not(.failed) {
+	display: none;
+}
+#wrapper > #shutdown.failed > .failed {
+	display: block;
+	position: fixed;
+	top: 0.5em;
+	left: 0.5em;
+	right: 0.5em;
+	padding: 0.5em;
+	background: red;
+	color: white;
 }
 
 h1 {
@@ -77,20 +122,22 @@ input, button {
 }
 
 .tabular {
-	position: relative;
-	overflow: hidden;
-	font: normal 22pt/44pt sans-serif;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .tabular > label {
-	position: relative;
-	float: left;
 	width: 33.33%;
+	font: normal 22pt/44pt sans-serif;
+}
+
+.tabular > label:after {
+	content: ":";
 }
 
 .tabular > .value {
-	position: relative;
-	font-weight: bold;
+	font: bold 22pt/44pt sans-serif;
 }
 
 #secret > .value {

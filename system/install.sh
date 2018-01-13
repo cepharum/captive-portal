@@ -49,3 +49,10 @@ cat >/etc/cron.d/wlanguests-purge <"$INSTALLDIR/environment.local.conf"
 cat >>/etc/cron.d/wlanguests-purge <<EOT
 * * * * * root CP_PURGE=1 cd $INSTALLDIR/data && ../system/update-iptables.sh
 EOT
+
+
+TOOL="$(which shutdown)"
+
+cat >/etc/sudoers.d/shutdown <<EOT
+wlanguests-web ALL = NOPASSWD: $TOOL
+EOT
