@@ -103,6 +103,7 @@ input, button {
 	box-sizing: content-box;
 	padding: 0 1em;
 	margin: 0.5em 0;
+	font-size: inherit;
 }
 
 .button {
